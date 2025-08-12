@@ -17,6 +17,8 @@ python log_analyzer/app.py --file example1.log --report average --file example2.
 ### Пример вывода
 ![img.png](img.png)
 ![img_1.png](img_1.png)
+![img_2.png](img_2.png)
+![img_3.png](img_3.png)
 
 ## Вызов pytest
 * pytest tests/test_analyzer.py
