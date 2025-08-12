@@ -35,3 +35,13 @@ def test_no_data_for_date_filter():
     report = process_files(file_paths=["tests/test_data.log"], report_type="average", filter_date_str="2025-01-01")
     assert len(report) == 0
     assert report == []
+
+
+def test_file_not_found():
+    report = process_files(file_paths=["tests/test_xyz.log"], report_type="average", filter_date_str=None)
+    assert report == []
+
+
+def test_invalid_date():
+    report = process_files(file_paths=["tests/test_data.log"], report_type="average", filter_date_str="2135-01-01")
+    assert report == []
